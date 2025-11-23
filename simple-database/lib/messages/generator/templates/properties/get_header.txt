@@ -1,0 +1,2 @@
+auto $$PROPERTY_NAME$$() const -> const decltype($$VARIABLE$$.data)&;
+auto $$PROPERTY_NAME$$() -> decltype($$VARIABLE$$.data)&;

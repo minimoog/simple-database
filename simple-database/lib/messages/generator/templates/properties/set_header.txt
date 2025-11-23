@@ -1,0 +1,6 @@
+template <typename... Args>
+auto $$PROPERTY_NAME$$(Args&&... args) {
+    return $$VARIABLE$$.data.Set(
+        std::forward<Args>(args)...
+    );
+}

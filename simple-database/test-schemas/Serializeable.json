@@ -1,0 +1,15 @@
+[
+    {
+        "name": "TableMeta",
+        "properties": [
+            {"name": "CreatedBy", "type": "id"},
+            {"name": "CreatedAt", "type": "uint64_t"}
+        ]
+    },
+    {
+        "name": "Decision",
+        "properties": [
+            {"name": "DecisionType", "type": "enum", "enum": ["Unknown", "Approve", "Reject", "NextRule"]}
+        ]
+    }
+]

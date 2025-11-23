@@ -1,0 +1,49 @@
+[
+    {
+        "name": "TestReq",
+        "properties": [
+            {"name": "UintEight", "type": "uint8_t"},
+            {"name": "UintSixteen", "type": "uint16_t"},
+            {"name": "UintThirtyTwo", "type": "uint32_t"},
+            {"name": "UintSixtyFour", "type": "uint64_t"},
+            {"name": "Baalean", "type": "bool"},
+            {"name": "Strang", "type": "string", "size": {"name": "MaxStringLen", "value": 4}},
+            {"name": "InternalBuff", "type": "internal_buffer", "size": {"name": "MaxInternalBuffSize", "value": 4}},
+            {"name": "ExternalBuff", "type": "external_buffer", "size": {"name": "MaxExternalBuffSize", "value": 5}},
+            {"name": "ConstLengthBuff", "type": "const_length_buffer", "size": {"name": "ConstLengthBuffLen", "value": 6}},
+            {"name": "ADataSet", "type": "length_encoded_set", "item_number": {"name": "MaxDatas", "value": 5}, "item_length": {"name": "MaxDataLen", "value": 4}},
+            {"name": "SomeStrings", "type": "string_set", "item_number": {"name": "MaxStringsInSet", "value": 5}, "item_length": {"name": "MaxSetStringLen", "value": 4}},
+            {"name": "Enam", "type": "enum", "enum": [ "None",  "Balls", "Test"]},
+            {"name": "GlobalEnum", "type": "enum", "global": "TestEnum"},
+            {"name": "MessageTypeEnum", "type": "enum", "global": "MessageType"},
+            {"name": "PrimitiveSetOfUintThirtyTwo", "type": "primitive_set", "item_number": {"name": "MaxNumberOfUinThirtyTwo", "value": 5}, "item_type": "uint32_t"},
+            {"name": "PrimitiveSetOfUintEight", "type": "primitive_set", "item_number": {"name": "MaxNumberOfUintEight", "value": 5}, "item_type": "uint8_t"},
+            {"name": "SetOfEnum", "type": "enum_set", "item_number": {"name": "MaxNumberOfEnum", "value": 5}, "item_type": "enum", "enum": ["Lol", "Jk"]},
+            {"name": "SetOfGlobalEnum", "type": "enum_set", "item_number": {"name": "MaxNumberOfGlobalEnum", "value": 5}, "item_type": "enum", "global": "TestEnum"},
+            {"name": "UIntTwoFiveSix", "type" : "uint256"}
+        ]
+    },
+    {
+        "name": "TestNested",
+        "properties": [
+            {"name": "SomeNumber", "type": "uint32_t"},
+            {"name": "NestTestReq", "type": "serializeable", "reference": "TestReq"},
+            {"name": "SomeOtherNumber", "type": "uint32_t"},
+            {"name": "SerializeableSet", "type": "serializeable_set", "item_number": {"name": "MaxNumberOfUintEight", "value": 3}, "reference": "TestReq"}
+        ]
+    },
+    {
+        "name": "TestRemainder",
+        "properties": [
+            {"name": "Buff", "type": "internal_buffer", "size": {"name": "MaxBuffSize", "value": "remainder"}}
+        ]
+    },
+    {
+        "name": "TestCompileFlagsCrypto",
+        "ifdef": "CRYPTOCURRENCY"
+    },
+    {
+        "name": "TestCompileFlagsCC",
+        "ifdef": "CONFIDENTIAL_COMPUTE"
+    }
+]

@@ -1,0 +1,22 @@
+EnumString $$BASE_NAME$$::$$ENUM_NAME$$ToString($$ENUM_NAME$$_t e)
+{
+    switch(e) {
+%%ENUM_LOOP%%
+        case $$ENUM_NAME$$_t::$$ENUM_VALUE$$:
+            return "$$ENUM_VALUE$$";
+%%ENUM_LOOP%%
+        default:
+            return "";
+    }
+}
+
+$$BASE_NAME$$::$$ENUM_NAME$$_t $$BASE_NAME$$::$$ENUM_NAME$$FromString(const EnumString& str)
+{
+%%ENUM_LOOP%%
+    if (str == "$$ENUM_VALUE$$") {
+        return $$ENUM_NAME$$_t::$$ENUM_VALUE$$;
+    }
+%%ENUM_LOOP%%
+
+    return ($$ENUM_NAME$$_t)0;
+}

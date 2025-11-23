@@ -1,0 +1,24 @@
+[
+    {
+        "name": "TestEnum",
+        "enum": [
+            "Zero",
+            "One",
+            "Two"
+        ]
+    },
+    {
+        "name": "ErrorCode",
+        "enum": [
+            "None",
+            "General",
+            "Driver",
+            "MessageSynchWord",
+            "MessageUnknownMessageType",
+            "MessageCRC",
+            "MessageDataLengthOverflow",
+            "MessagePartIndexTooLarge",
+            "MessageUnableToRoute"
+        ]
+    }
+]

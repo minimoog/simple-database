@@ -1,0 +1,6 @@
+/*
+* $$FILE_NAME$$
+*
+* Copyright (C) $$YEAR$$ Toni Jovanoski
+*/
+

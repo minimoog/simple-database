@@ -1,0 +1,9 @@
+[
+    {
+        "name": "TestTable",
+        "properties": [
+            {"name": "SomeId", "type": "id"},
+            {"name": "Name", "type": "string", "size": {"name": "MaxNameLength", "value": 12}}
+        ]
+    }
+]

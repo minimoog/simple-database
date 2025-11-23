@@ -1,0 +1,21 @@
+enum class $$ENUM_NAME$$_t : uint32_t {
+%%ENUM_LOOP%%
+    $$ENUM_VALUE$$,
+%%ENUM_LOOP%%
+};
+
+class $$ENUM_NAME$$Wrapper : public BaseEnumWrapper<$$ENUM_NAME$$_t> {
+    public:
+        $$ENUM_NAME$$Wrapper() = default;
+        $$ENUM_NAME$$Wrapper($$ENUM_NAME$$_t e) { value = e; }
+        $$ENUM_NAME$$Wrapper(uint32_t e) { value = ($$ENUM_NAME$$_t)e; }
+        EnumString ToString() const override {
+            return $$ENUM_NAME$$ToString(value);
+        }
+        void FromString(const EnumString& str) override {
+            value = $$ENUM_NAME$$FromString(str);
+        }
+};
+
+static EnumString $$ENUM_NAME$$ToString($$ENUM_NAME$$_t e);
+static $$ENUM_NAME$$_t $$ENUM_NAME$$FromString(const EnumString& str);

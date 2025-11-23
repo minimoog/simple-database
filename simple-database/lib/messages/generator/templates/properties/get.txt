@@ -1,0 +1,8 @@
+auto $$BASE_NAME$$::$$PROPERTY_NAME$$() const -> const decltype($$VARIABLE$$.data) &
+{
+    return $$VARIABLE$$.data;
+}
+auto $$BASE_NAME$$::$$PROPERTY_NAME$$() -> decltype($$VARIABLE$$.data) &
+{
+    return $$VARIABLE$$.data;
+}

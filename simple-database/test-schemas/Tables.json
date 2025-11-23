@@ -1,0 +1,26 @@
+[
+    {
+        "name": "DbTestObject",
+        "properties": [
+            {"name": "UserId", "type": "id"}
+        ]
+    },
+    {
+        "name": "DbNestTestObject",
+        "properties": [
+            {"name": "DbTest", "type": "serializeable", "reference": "DbTestObject"},
+            {"name": "TestDec", "type": "serializeable", "reference": "Decision"}
+        ]
+    },
+    {
+        "name": "TestUser",
+        "properties": [
+            {"name": "Name", "type": "string", "size": {"name": "MaxNameLength"}},
+            {"name": "PublicKey", "type": "internal_buffer", "size": {"name": "PublicKeyMaxLength", "value": 128}},
+            {"name": "FbToken", "type": "string", "size": {"name": "MaxTokenLength", "value": 256}},
+            {"name": "CNonce", "type": "uint64_t"},
+            {"name": "Roles", "type": "uint16_t"},
+            {"name": "OtherUserId", "type": "id"}
+        ]
+    }
+]

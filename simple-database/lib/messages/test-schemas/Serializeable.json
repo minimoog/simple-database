@@ -1,0 +1,9 @@
+[
+    {
+        "name": "TableMeta",
+        "properties": [
+            {"name": "SomeId", "type": "id"},
+            {"name": "Time", "type": "uint64_t"}
+        ]
+    }
+]

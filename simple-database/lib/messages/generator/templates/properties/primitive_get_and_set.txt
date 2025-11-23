@@ -1,0 +1,9 @@
+$$TYPE$$ $$BASE_NAME$$::$$PROPERTY_NAME$$() const
+{
+    return $$VARIABLE$$.data.value;
+}
+
+void $$BASE_NAME$$::$$PROPERTY_NAME$$($$TYPE$$ $$ARG$$)
+{
+    $$VARIABLE$$.data.value = $$ARG$$;
+}

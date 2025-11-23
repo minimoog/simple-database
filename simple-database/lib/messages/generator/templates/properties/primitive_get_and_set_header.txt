@@ -1,0 +1,2 @@
+    $$TYPE$$ $$PROPERTY_NAME$$() const;
+    void $$PROPERTY_NAME$$($$TYPE$$ $$ARG$$);

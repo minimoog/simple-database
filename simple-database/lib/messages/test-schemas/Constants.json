@@ -1,0 +1,8 @@
+{
+    "MessageLength": 4096,
+    "EnumMaxLength": 30,
+    "HeaderMinLength": 75,
+    "TokenMaxLength": 128,
+    "MaxRequestIdLength": 36
+
+}
